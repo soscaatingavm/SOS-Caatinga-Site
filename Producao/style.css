@@ -1,0 +1,270 @@
+/* Seção 1 - Início do Projeto */
+.hero-section {
+  position: relative;
+  background: #f5f5f5;
+  overflow: hidden;
+  padding: 80px 20px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(29, 77, 47, 0.5);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(163, 211, 122, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-section .shape-1 {
+  position: absolute;
+  top: 20%;
+  left: -60px;
+  width: 150px;
+  height: 150px;
+  background: rgba(29, 77, 47, 0.2);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-section .shape-2 {
+  position: absolute;
+  bottom: 25%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-section .shape-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 120px;
+  height: 120px;
+  background: rgba(163, 211, 122, 0.7);
+  border-radius: 20px;
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  flex: 1 1 40%;
+  text-align: left;
+}
+
+.hero-text .logo {
+  width: 12rem;
+  margin-bottom: 15px;
+}
+
+.hero-text h1 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #1d4d2f;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text .subtitle {
+  font-size: 2rem;
+  color: #555;
+}
+
+.hero-images {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-areas:
+    "img1 img2"
+    "img3 img2";
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.hero-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 14px rgba(29, 77, 47, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-images img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(29, 77, 47, 0.35);
+}
+
+.hero-images .img1 {
+  grid-area: img1;
+}
+
+.hero-images .img2 {
+  grid-area: img2;
+  align-self: center;
+}
+
+.hero-images .img3 {
+  grid-area: img3;
+}
+
+/* /* Formatação Base das Seções */
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  padding: 100px 20px;
+}
+
+.section-text {
+  flex: 1 1 40%;
+  text-align: left;
+}
+
+.section-text h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: #1d4d2f;
+  margin-bottom: 20px;
+}
+
+.section-text h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.section-text .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  text-align: justify;
+}
+
+/* Formatação das Imagens das Seções */
+.section-images {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.section-images img {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1.8 / 1.2;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .section-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(29, 77, 47, 0.35);
+} */
+
+/* Empilhamento das Imagens das Seções */
+.section-images.stacked {
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section-images.stacked img:nth-child(1) {
+  transform: rotate(-2deg);
+  /* desalinhamento leve */
+}
+
+.section-images.stacked img:nth-child(2) {
+  transform: rotate(3deg);
+}
+
+/* Alternância de cores de fundo */
+.bg-dark {
+  background: #f5f5f5;
+}
+
+.bg-light {
+  background: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero-text .logo {
+    width: 9rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text .subtitle {
+    font-size: 1.6rem;
+  }
+
+  .section-container {
+    padding: 100px 28px;
+  }
+
+  .section-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .section-images,
+  .section-images.stacked {
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .section-images img {
+    max-width: 80%;
+    transform: none;
+    /* remove rotação no mobile */
+  }
+
+}

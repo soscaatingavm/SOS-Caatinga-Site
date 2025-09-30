@@ -1,0 +1,163 @@
+/* Seção Para quem ligar caso o incêndio comece? */
+.denuncia {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.form-color {
+  background: #f5f5f5;
+}
+
+.denuncia h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: #1d4d2f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.instrucao {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin: 40px 0 40px;
+}
+
+.denuncia p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Cards Para quem ligar caso o incêndio comece? */
+.denuncia-card {
+  background: #f0f8f4;
+  border: 1px solid #d1e7dd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.denuncia-card h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1d4d2f;
+}
+
+.denuncia-card p,
+.denuncia-card li {
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.denuncia-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.denuncia-card li {
+  margin-bottom: 10px;
+}
+
+/* Formulário */
+.form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.form-img {
+  flex: 1 1 300px;
+}
+
+.form-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.form-denuncia {
+  flex: 1 1 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-denuncia label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-denuncia input,
+.form-denuncia textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-denuncia input:focus,
+.form-denuncia textarea:focus {
+  border-color: #1d4d2f;
+  box-shadow: 0 0 0 3px rgba(29, 77, 47, 0.2);
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-group button {
+  flex: 1;
+  background: #1d4d2f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-group button:hover {
+  background: #14522b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .denuncia h2 {
+    font-size: 1.8rem;
+  }
+
+  .denuncia-card {
+    padding: 20px;
+  }
+
+  .denuncia-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+  }
+}
