@@ -1,6 +1,6 @@
 /* Seção Hero - Baner Inicial */
 .hero {
-  background: url("../Fotos/bgmain2.png") no-repeat center/cover;
+  background: url("./Fotos/bgmain2.png") no-repeat center/cover;
   color: white;
   height: 810px;
   display: flex;
